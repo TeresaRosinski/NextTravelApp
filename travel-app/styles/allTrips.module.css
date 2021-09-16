@@ -1,0 +1,23 @@
+.page{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  padding: 7%;
+  background-color: var(--white);
+  height: 100vh;
+}
+
+.border{
+  margin-left: 35%;
+  margin-right: 35%;
+  width: 30%;
+  height: 15px;
+  background-color: var(--teal);
+}
+
+.tripContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
