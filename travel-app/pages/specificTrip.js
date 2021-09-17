@@ -17,9 +17,23 @@ export default function SpecificTrip() {
 					<p>Trip Dates: Pulled in automatically from form</p>
 				</div>
 
-				<div className={styles.image}>
-					<Image src="/smokies.svg" height={500} width={500}></Image>
+				<div className={styles.image_carousel}>
+					<div className={styles.image}>
+					</div>
+          <div className={styles.image}>
+					</div>
+          <div className={styles.image}>
+					</div>
 				</div>
+        <div className={styles.lodging}>
+          <p>Name:</p>
+          <p>Address:</p>
+          <p>Price Per Night:</p>
+          <p>Total Nights:</p>
+          <p>Total Price:</p>
+        </div>
+        <div className={styles.activities}></div>
+        <div className={styles.schedule}></div>
 			</main>
 		</>
 	);
