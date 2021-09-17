@@ -18,9 +18,12 @@ export default function Home() {
 
 					<div className={styles.grid}>
             <Link href="/allTrips">
-            <a> <p className={styles.card}> Build A Trip </p></a>
+            <a> <p className={styles.card}> All Trips I Have Built</p></a>
             </Link>
-						<p className={styles.card}>Learn How to Build a Trip</p>
+						<Link href="/buildTrip">
+						<p className={styles.card}>Build a New Trip</p>
+						</Link>
+					
 					</div>
 				</main>
 			</Layout>

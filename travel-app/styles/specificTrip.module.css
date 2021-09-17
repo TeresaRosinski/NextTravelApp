@@ -1,0 +1,16 @@
+.page{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  padding: 7%;
+  background-color: var(--white);
+  height: 100vh;
+}
+.title {
+  font-size: 400%;
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--teal);
+  border-bottom: 1px solid var(--teal) 30%;
+};
