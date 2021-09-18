@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/SpecificTrip.module.css";
 import "animate.css";
+import ActivityCard from "../components/activityCard";
 import Image from "next/image";
 
 export default function SpecificTrip() {
@@ -12,28 +13,29 @@ export default function SpecificTrip() {
 			</Head>
 
 			<main className={styles.page}>
-				<div>
-					<p className={styles.title}>Trip Name</p>
-					<p>Trip Dates: Pulled in automatically from form</p>
+				<div className={styles.header}>
+					<div className={styles.headerText}>
+						<p className={styles.title}>Trip Name</p>
+						<p>Trip Dates: Pulled in automatically from form</p>
+					</div>
+					<div className={styles.headerImage}></div>
+				</div>
+				<div className={styles.lodging}>
+					<p className={styles.sectionTitle}>Lodging</p>
+					<p className={styles.sectionContent}>Name:</p>
+					<p className={styles.sectionContent}>Address:</p>
+					<p className={styles.sectionContent}>Price Per Night:</p>
+					<p className={styles.sectionContent}>Total Nights:</p>
+					<p className={styles.sectionContent}>Total Price:</p>
 				</div>
 
-				<div className={styles.image_carousel}>
-					<div className={styles.image}>
-					</div>
-          <div className={styles.image}>
-					</div>
-          <div className={styles.image}>
-					</div>
+				<div className={styles.activities}>
+					<p className={styles.sectionTitle}>Activities</p>
+					<ActivityCard />
 				</div>
-        <div className={styles.lodging}>
-          <p>Name:</p>
-          <p>Address:</p>
-          <p>Price Per Night:</p>
-          <p>Total Nights:</p>
-          <p>Total Price:</p>
-        </div>
-        <div className={styles.activities}></div>
-        <div className={styles.schedule}></div>
+				<div className={styles.schedule}>
+					<p className={styles.sectionTitle}>schedule</p>
+				</div>
 			</main>
 		</>
 	);
