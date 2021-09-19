@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import styles from "./tripCard.module.css";
 
 export default function TripCard(props) {

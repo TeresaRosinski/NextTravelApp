@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/buildTrip.module.css";
 import "animate.css";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 
 export default function BuildTrip() {
 	return (

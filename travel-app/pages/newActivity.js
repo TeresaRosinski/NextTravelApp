@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/activity.module.css";
 import "animate.css";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import user1 from "../data/practData";
 import React, { useState } from "react";
 

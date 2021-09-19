@@ -3,7 +3,7 @@ import styles from "../styles/specificTrip.module.css";
 import "animate.css";
 import ActivityCard from "../components/activityCard";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import user1 from "../data/practData";
 
 const tripData = user1.trips[0]; 
