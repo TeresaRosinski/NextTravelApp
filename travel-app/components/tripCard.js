@@ -5,7 +5,7 @@ export default function TripCard(props) {
 	return (
 		<div className={styles.page}>
 			<div className={styles.container}>
-				<Link href="/">
+				<Link href="/specificTrip">
 					<a>
 						<div className={styles.cardCont}>
 							<div className={styles.tripImg}></div>

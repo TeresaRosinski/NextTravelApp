@@ -1,3 +1,20 @@
+.editors{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:10%;
+  text-decoration: underline;
+}
+.title{
+  font-size: 170%;
+  font-weight: bold;
+  color:var(--teal);
+  margin-bottom:1%;
+}
+.subText{
+  font-size:120%;
+  padding-bottom:2%;
+  color:grey;
+}
 .cardCont{
   display: flex;
   flex-direction: column;
@@ -5,17 +22,11 @@
   height: 25vh;
   width: 25vh;
   padding: 2%;
-  border: 1px solid black;
-};
-.title{
-  font-size: 170%;
-  font-weight: bold;
-};
-
-
-
-
-
-.subText{
-  font-size:120%;
-};
+  margin:1%;
+  background-color: #f5f5f5;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.cardCont:hover{
+  cursor: pointer;
+  transform: scale(1.04);
+}

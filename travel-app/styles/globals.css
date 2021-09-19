@@ -4,7 +4,8 @@
   box-sizing: none;
 }
 :root{
-  --teal:#6d9d9e;
+  --teal:rgba(88, 42, 68,.8);
+  --subPurp:rgba(88,42,68, .6);
   --brown: #6f584d;
   --red: #7c2020;
   --ruby: #cd342e;
