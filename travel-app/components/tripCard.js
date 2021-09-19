@@ -1,25 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./tripCard.module.css";
+
+
 export default function TripCard(props) {
 	return (
-		<div className={styles.page}>
-			<div className={styles.container}>
-				<Link href="/specificTrip">
-					<a>
-						<div className={styles.cardCont}>
-							<div className={styles.tripImg}></div>
-							<div className={styles.text}>
-								<p className={styles.title}>Smoky Mountains</p>
-								<p className={styles.subText}>
-									{" "}
-									Maggie Valley, North Carolina{" "}
-								</p>
-							</div>
-						</div>
-					</a>
-				</Link>
-			</div>
-		</div>
+		<Link href="/specificTrip" id={props._id}>
+			<a>
+				<div className={styles.cardCont}>
+						<p className={styles.title}>{props.trip_name}</p>
+						<p className={styles.subText}> {props.trip_location} </p>
+						<p className={styles.subText}> {props.start_date}</p>
+						<p className={styles.subText}> {props.end_date}</p>
+					</div>
+			</a>
+		</Link>
 	);
 }

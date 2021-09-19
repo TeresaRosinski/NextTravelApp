@@ -4,8 +4,12 @@ import "animate.css";
 import ActivityCard from "../components/activityCard";
 import Image from "next/image";
 import Link from "next/Link";
+import user1 from "../data/practData";
 
-export default function SpecificTrip() {
+const tripData = user1.trips[0]; 
+console.log(tripData.end_date);
+
+export default function SpecificTrip(props) {
 	return (
 		<>
 			<Head>
@@ -16,11 +20,9 @@ export default function SpecificTrip() {
 			<main className={styles.page}>
 				<div className={styles.header}>
 					<div className={styles.headerText}>
-						<p className={styles.title}>Smoky Mountains</p>
-						<p className={styles.subText}>From: 08/22/2022</p>
-						<p className={styles.subText} >To: 09/17/2022</p>
-						<p className={styles.subText}>15 Days</p>
-						<p className={styles.subText}>14 Nights</p>
+						<p className={styles.title}>{tripData.trip_name}</p>
+						<p className={styles.subText}>From: {tripData.start_date}</p>
+						<p className={styles.subText} >To: {tripData.end_date}</p>
 					</div>
 				</div>
 				<div className={styles.sectionContainerCenter}>
@@ -28,24 +30,25 @@ export default function SpecificTrip() {
 				<p className={styles.sectionTitle}>Lodging</p>
 					<div className={styles.lodging}>
 
-						<p className={styles.subText}>Name: <span>VRBO </span></p>
-						<p className={styles.subText}>Address:<span>23413 Maggie Valley, North Carolina, SUA</span></p>
-						<p className={styles.subText}>Price Per Night: <span>$345</span> </p>
-						<p className={styles.subText}>Total Nights:<span>14</span> </p>
-						<p className={styles.subText}>Total Price:<span>$23413</span></p>
+						<p className={styles.subText}>Name: <span>{tripData.lodging.name}</span></p>
+						<p className={styles.subText}>Address:<span>{tripData.lodging.location}</span></p>
+						<p className={styles.subText}>Price Per Night: <span>{tripData.lodging.pricePerNight}</span> </p>
+						<p className={styles.subText}>Total Nights:<span>{tripData.lodging.total_nights}</span> </p>
+						<p className={styles.subText}>Total Price:<span>${tripData.lodging.total_nights * tripData.lodging.pricePerNight}</span></p>
 					</div>
 				</div>
 
 				<div className={styles.sectionContainerLeft}>
 					<p className={styles.sectionTitle}>Activities</p>
-					<Link href='/newActivity'>
-						<a className={styles.button}>Add New Activity</a>
-					</Link>
+					
 					<div className={styles.activities}>
 						<ActivityCard />
 						<ActivityCard />
 						<ActivityCard />
 					</div>
+					<Link href='/newActivity'>
+						<a className={styles.button}>Add New Activity</a>
+					</Link>
 				</div>
 			</main>
 		</>

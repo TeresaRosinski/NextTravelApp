@@ -10,6 +10,7 @@
   border: 1px solid rgba(66,77,144);
   color:rgba(66,77,144,.8);
   margin-bottom: 3%;
+  margin-top:2%;
 }
 .button:hover{
   background-color: rgba(66,77,144,.8);
@@ -27,6 +28,7 @@
   background-color: rgba(66,77,144);
   border-radius:2px;
   padding:2%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .sectionContainerLeft{
   margin-top:2%;

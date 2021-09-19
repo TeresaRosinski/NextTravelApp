@@ -3,8 +3,7 @@
   flex-direction: column;
   justify-content:flex-start;
   padding: 7%;
-  background-color: var(--white);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .border{
@@ -20,4 +19,10 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 5%;
+}
+
+.back{
+  padding-left:4%;
+  text-decoration: underline;
+  font-size:130%;
 }

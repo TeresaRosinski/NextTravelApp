@@ -18,6 +18,7 @@ export default function BuildTrip() {
 				</div>
 
 				<div className={styles.content}>
+
 					<form className={styles.form}>
 						{" "}
 						<p className={styles.formTitle}>Activity Info</p>
@@ -28,6 +29,13 @@ export default function BuildTrip() {
 								name="activity[name]"
 								placeholder="Activity Name"></input>
 						</div>
+            <div className={styles.field}>
+							<label>Details</label>
+							<input
+								type="text"
+								name="activity[details]"
+								placeholder="Details"></input>
+						</div>
 						<div className={styles.field}>
 							<label>Location</label>
 							<input
@@ -35,21 +43,29 @@ export default function BuildTrip() {
 								name="activity[location]"
 								placeholder="Location"></input>
 						</div>
+            
+            <div className={styles.field}>
+							<label>Activity URL</label>
+							<input
+								type="text"
+								name="activity[url]"
+								placeholder="www.activity_name.com"></input>
+						</div>
 						<div className={styles.fields_row}>
 							<div className={styles.field_2inputs}>
-								<label>Date</label>
+								<label>Date Going</label>
 								<input
 									type="date"
-									name="activity[date]"
+									name="activity[date_going]"
 									id="activity-date"
 									min="2021-09-17"
-									nax="2041-09-17"></input>
+									max="2041-09-17"></input>
 							</div>
 							<div className={styles.field_2inputs}>
 								<label>Price Per Person</label>
 								<input
 									type="number"
-									name="activity[price]"
+									name="activity[price_person]"
 									id="price"
 									palceholder="$"></input>
 							</div>

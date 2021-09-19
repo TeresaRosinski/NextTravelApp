@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/buildTrip.module.css";
 import "animate.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BuildTrip() {
 	return (
@@ -12,30 +13,18 @@ export default function BuildTrip() {
 			</Head>
 
 			<main className={styles.page}>
-				<div className={`${styles.header}`}>
+				<Link href='/allTrips'>
+					<a className={styles.back}>back</a>
+				</Link>
+				<div className={styles.header}>
 					<div className={styles.image}>
 						<Image src="/characterWorking.svg" height={500} width={500}></Image>
 					</div>
-					<div className={styles.headerText}>
-						<p className={`${styles.title} animate__animated animate__rubberBand`}>
-							Plan Something Extraodinary
-						</p>
-
-						<div className={styles.textSection}>
-							<p className={styles.subText}>
-								On this page is a form that will help you think about and answer
-								some helpful trip planning questions
-							</p>
-							<p className={styles.subText}>All questions are optional</p>
-							<p className={styles.subText}>
-								This trip can always be updated and edited in the future
-							</p>
-						</div>
-					</div>
+					<p className={styles.title}>Plan Something Extraodinary</p>
 				</div>
 
 				<form className={styles.form}>
-					<p className={styles.formTitle}>Trip Info</p>
+					<p className={styles.formTitle}>Trip Basics</p>
 
 					<div className={styles.field}>
 						<label>Name</label>
@@ -50,13 +39,6 @@ export default function BuildTrip() {
 							type="text"
 							name="trip[location]"
 							placeholder="Location"></input>
-					</div>
-					<div className={styles.field}>
-						<label>Lodging</label>
-						<input
-							type="text"
-							name="trip[lodging]"
-							placeholder="Lodging"></input>
 					</div>
 
 					<div className={styles.fields_row}>
@@ -79,6 +61,7 @@ export default function BuildTrip() {
 								max="2041-09-17"></input>
 						</div>
 					</div>
+
 					<div className={styles.fields_row}>
 						<div className={styles.field_2inputs}>
 							<label>Budget</label>
@@ -86,7 +69,8 @@ export default function BuildTrip() {
 								type="number"
 								name="trip[budget]"
 								id="budget"
-								palceholder="$"></input>
+								palceholder="$"
+								min="0"></input>
 						</div>
 						<div className={styles.field_2inputs}>
 							<label>Quantity of People Going</label>
@@ -94,7 +78,43 @@ export default function BuildTrip() {
 								type="number"
 								name="trip[budget]"
 								id="budget"
-								palceholder="$"></input>
+								palceholder="$"
+								min="0"></input>
+						</div>
+					</div>
+					<p className={styles.formTitle}>Lodging</p>
+					<div className={styles.field}>
+						<label>Lodging Name</label>
+						<input
+							type="text"
+							name="trip[lodging-name]"
+							placeholder="Lodging"></input>
+					</div>
+					<div className={styles.field}>
+						<label>Lodging Location</label>
+						<input
+							type="text"
+							name="trip[lodging-location]"
+							placeholder="Lodging Address"></input>
+					</div>
+					<div className={styles.fields_row}>
+						<div className={styles.field_2inputs}>
+							<label>Price Per Night</label>
+							<input
+								type="number"
+								name="trip[lodging-price-night]"
+								id="lodging-price-night"
+								placeholder="Price Per Night"
+								min="0"></input>
+						</div>
+						<div className={styles.field_2inputs}>
+							<label>Total Nights</label>
+							<input
+								type="number"
+								name="trip[lodging-nights]"
+								id="lodging-nights"
+								placeholder="Total Nights at Lodging"
+								min="0"></input>
 						</div>
 					</div>
 					<div className={styles.buttonHolder}>

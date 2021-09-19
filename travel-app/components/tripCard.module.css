@@ -1,44 +1,27 @@
 
-
 .cardCont{
   display: flex;
   flex-direction: column;
-  align-items: space-between;
+  justify-content: center;
   height: 40vh; 
   width: 40vh; 
+  padding:3%;
   margin-top: 5%;
   box-shadow: 2px 2px 10px 8px rgba(109,157,158, .4);
   background-color: var(--white);
+  flex-wrap: wrap;
 }
 .cardCont:hover{
   cursor: pointer;
   animation: 'shakeY';
   animation-duration: 2s;
 }
-.tripImg{
-  height: 30vh; 
-  width: 40vh;
-  background-image: url('/smokies.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.text{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2%;
-  height: 10vh; 
-  color: var(--teal);
-  margin-bottom: 1%;
-  
-  
-}
 .title{
   font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 2px;
   margin-bottom: 2%;
-
+  color: var(--teal);
 }
 .subText{
   font-size: 1.2rem;
