@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./tripCard.module.css";
 
-
 export default function TripCard(props) {
 	return (
 		<Link href="/specificTrip" id={props._id}>

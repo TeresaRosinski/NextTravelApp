@@ -7,7 +7,7 @@ import Link from "next/Link";
 import user1 from "../data/practData";
 
 const tripData = user1.trips[0]; 
-console.log(tripData.end_date);
+const activityData = tripData.activities;
 
 export default function SpecificTrip(props) {
 	return (
@@ -42,9 +42,9 @@ export default function SpecificTrip(props) {
 					<p className={styles.sectionTitle}>Activities</p>
 					
 					<div className={styles.activities}>
-						<ActivityCard />
-						<ActivityCard />
-						<ActivityCard />
+						{
+							activityData.map(act => <ActivityCard name={act.name} id={act._id} url={act.url} details={act.details} hours={act.hours} date_going={act.date_going} location={act.location}/>)
+						}
 					</div>
 					<Link href='/newActivity'>
 						<a className={styles.button}>Add New Activity</a>

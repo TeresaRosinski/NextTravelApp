@@ -3,8 +3,15 @@ import styles from "../styles/activity.module.css";
 import "animate.css";
 import Image from "next/image";
 import Link from "next/link";
+import user1 from "../data/practData";
+import React, { useState } from "react";
 
 export default function BuildTrip() {
+	const tripData = user1.trips[0];
+	const activityData = tripData.activities;
+	const [activities, setActivity] = useState(activityData);
+	console.log(activityData);
+
 	return (
 		<>
 			<Head>
@@ -12,15 +19,13 @@ export default function BuildTrip() {
 				<meta name="description" content="Travel application" />
 			</Head>
 
-			<main>
+			<main className={styles.pageW}>
 				<div className={styles.header}>
 					<p className={styles.title}>Create Activity</p>
 				</div>
 
 				<div className={styles.content}>
-
 					<form className={styles.form}>
-						{" "}
 						<p className={styles.formTitle}>Activity Info</p>
 						<div className={styles.field}>
 							<label>Name</label>
@@ -29,7 +34,7 @@ export default function BuildTrip() {
 								name="activity[name]"
 								placeholder="Activity Name"></input>
 						</div>
-            <div className={styles.field}>
+						<div className={styles.field}>
 							<label>Details</label>
 							<input
 								type="text"
@@ -43,8 +48,7 @@ export default function BuildTrip() {
 								name="activity[location]"
 								placeholder="Location"></input>
 						</div>
-            
-            <div className={styles.field}>
+						<div className={styles.field}>
 							<label>Activity URL</label>
 							<input
 								type="text"
@@ -71,7 +75,7 @@ export default function BuildTrip() {
 							</div>
 						</div>
 						<div className={styles.buttonHolder}>
-							<button className={styles.button} type="submit">
+							<button className={styles.button} type="submit" onClick={addActivity}>
 								SUBMIT
 							</button>
 						</div>

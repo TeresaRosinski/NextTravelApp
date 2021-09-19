@@ -6,7 +6,8 @@ import Link from "next/link";
 import user1 from "../data/practData";
 
 const tripData = user1.trips; 
-console.log(tripData);
+
+
 export default function AllTrips(props) {
 	return (
 		<>
@@ -20,6 +21,12 @@ export default function AllTrips(props) {
 					<a className={styles.back}>back</a>
 				</Link>
 				<p className="title"> All TRIPS FOR {user1.name} </p>
+				<Link href="/buildTrip">
+					<a>
+						<p className={styles.button}>Create New Trip</p> 
+					</a>
+				</Link>
+				
 				<div className={styles.border}> -</div>
 				<div className={styles.tripContainer}> 
 				{
