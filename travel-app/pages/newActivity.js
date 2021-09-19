@@ -75,7 +75,7 @@ export default function BuildTrip() {
 							</div>
 						</div>
 						<div className={styles.buttonHolder}>
-							<button className={styles.button} type="submit" onClick={addActivity}>
+							<button className={styles.button} type="submit">
 								SUBMIT
 							</button>
 						</div>
