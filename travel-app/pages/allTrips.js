@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/allTrips.module.css";
 import "animate.css";
 import TripCard from "../components/tripCard";
-import Link from "next/link";
+import Link from "next/Link";
 import user1 from "../data/practData";
 
 const tripData = user1.trips; 
