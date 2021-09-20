@@ -3,6 +3,34 @@ import styles from "../styles/buildTrip.module.css";
 import "animate.css";
 import Image from "next/image";
 import Link from "next/link";
+import { MongoClient } from 'mongodb';
+import nextConnect from 'next-connect';
+
+const client = new MongoClient("mongodb+srv://Teresa:Teresa@cluster0.eil3q.mongodb.net/next_travel_app?retryWrites=true&w=majority");
+const handler = nextConnect();
+
+
+async function handleSubmit(event){
+	try {
+		await client.connect();
+		const database = client.db("NextTravelApp");
+		const userTripsCollection = database.collection('userTrips');
+		const allUserTrips = await userTripsCollection.find({}).toArray();
+		const userTrips = allUserTrips[0];
+		const userTripId = userTrips._id;
+
+		console.log(event);
+		//const newTrip = 
+
+		//const updateResult = await userTripsCollection.updateOne({ "_id": userTripId }, { $push: {"trips": newTrip }});
+	}
+	catch (error) {
+		console.log(error)
+	}
+	finally {
+		await client.close();
+	}
+};
 
 export default function BuildTrip() {
 	return (
@@ -118,7 +146,7 @@ export default function BuildTrip() {
 						</div>
 					</div>
 					<div className={styles.buttonHolder}>
-						<button className={styles.button} type="submit">
+						<button className={styles.button} type="submit" onClick={handleSubmit}>
 							SUBMIT
 						</button>
 					</div>
