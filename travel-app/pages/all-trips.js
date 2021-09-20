@@ -6,29 +6,6 @@ import Link from "next/link";
 import { MongoClient } from 'mongodb';
 
 
-
-export async function getServerSideProps(context) {
-	const client = new MongoClient("mongodb+srv://Teresa:Teresa@cluster0.eil3q.mongodb.net/next_travel_app?retryWrites=true&w=majority");
-
-	try {
-		await client.connect();
-		const database = client.db("NextTravelApp");
-		const userDataCollection = database.collection('UserData');
-		const allUserTrips = await userDataCollection.find({}).toArray();
-		const userData = allUserTrips[0];
-
-		return {
-			props: { name: userData.name, trips: JSON.stringify(userData.trips)}, // will be passed to the page component as props
-		}
-	}
-	catch (error) {
-		console.log(error)
-	}
-	finally {
-		await client.close();
-	}
-}
-
 export default function AllTrips(props) {
 	const trips = JSON.parse(props.trips);
 	return (
@@ -53,11 +30,33 @@ export default function AllTrips(props) {
 				<div className={styles.tripContainer}>
 					{
 						trips.map(trip =>
-							<TripCard id={trip._id} trip_name={trip.trip_name} trip_location={trip.trip_location} start_date={trip.start_date} end_date={trip.end_date} />
+							<TripCard id={trip._id} name={trip.name} location={trip.location} start_date={trip.start_date} end_date={trip.end_date} />
 						)
 					}
 				</div>
 			</main>
 		</>
 	);
+}
+
+export async function getServerSideProps(context) {
+	const client = new MongoClient("mongodb+srv://Teresa:Teresa@cluster0.eil3q.mongodb.net/next_travel_app?retryWrites=true&w=majority");
+
+	try {
+		await client.connect();
+		const database = client.db("NextTravelApp");
+		const userDataCollection = database.collection('UserData');
+		const allUserTrips = await userDataCollection.find({}).toArray();
+		const userData = allUserTrips[0];
+
+		return {
+			props: { name: userData.name, trips: JSON.stringify(userData.trips)}, // will be passed to the page component as props
+		}
+	}
+	catch (error) {
+		console.log(error)
+	}
+	finally {
+		await client.close();
+	}
 }

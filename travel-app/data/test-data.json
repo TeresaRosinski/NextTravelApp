@@ -9,8 +9,8 @@
             "_id": {
                 "$oid": "6147c6b6dac5291aa83b98e1"
             },
-			"trip_name": "Smoky Mountains",
-			"trip_location": "Smoky Mountains, NC + TN",
+			"name": "Smoky Mountains",
+			"location": "Smoky Mountains, NC + TN",
 			"start_date": "09/23/2021",
 			"end_date": "10/3/2021",
 			"num_travelers": 12,
@@ -20,8 +20,8 @@
                 },
 				"name": "VRBO Maggie Valley",
 				"location": "Maggie Valley, NC Some street, some zip",
-				"pricePerNight": 345,
-				"total_nights": 7
+				"price_per_night": 345,
+				"num_nights": 7
 			},
 			"activities": [
 				{
