@@ -13,12 +13,12 @@ export async function getServerSideProps(context) {
 	try {
 		await client.connect();
 		const database = client.db("NextTravelApp");
-		const userTripsCollection = database.collection('userTrips');
-		const allUserTrips = await userTripsCollection.find({}).toArray();
-		const userTrips = allUserTrips[0];
+		const userDataCollection = database.collection('UserData');
+		const allUserTrips = await userDataCollection.find({}).toArray();
+		const userData = allUserTrips[0];
 
 		return {
-			props: { name: userTrips.name, trips: JSON.stringify(userTrips.trips)}, // will be passed to the page component as props
+			props: { name: userData.name, trips: JSON.stringify(userData.trips)}, // will be passed to the page component as props
 		}
 	}
 	catch (error) {
