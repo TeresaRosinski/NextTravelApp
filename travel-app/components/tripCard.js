@@ -4,7 +4,7 @@ import styles from "./tripCard.module.css";
 
 export default function TripCard(props) {
 	return (
-		<Link href="/specificTrip" id={props._id}>
+		<Link href="/specific-trip" id={props._id}>
 			<a>
 				<div className={styles.cardCont}>
 					<p className={styles.title}>{props.trip_name}</p>

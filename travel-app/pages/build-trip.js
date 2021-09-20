@@ -13,12 +13,12 @@ export default function BuildTrip() {
 			</Head>
 
 			<main className={styles.page}>
-				<Link href='/allTrips'>
+				<Link href='/all-trips'>
 					<a className={styles.back}>back</a>
 				</Link>
 				<div className={styles.header}>
 					<div className={styles.image}>
-						<Image src="/characterWorking.svg" height={500} width={500}></Image>
+						<Image src="/character-working.svg" height={500} width={500}></Image>
 					</div>
 					<p className={styles.title}>Plan Something Extraodinary</p>
 				</div>

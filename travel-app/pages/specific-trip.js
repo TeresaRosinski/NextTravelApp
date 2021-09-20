@@ -46,7 +46,7 @@ export default function SpecificTrip(props) {
 							activityData.map(act => <ActivityCard name={act.name} id={act._id} url={act.url} details={act.details} hours={act.hours} date_going={act.date_going} location={act.location}/>)
 						}
 					</div>
-					<Link href='/newActivity'>
+					<Link href='/new-activity'>
 						<a className={styles.button}>Add New Activity</a>
 					</Link>
 				</div>
