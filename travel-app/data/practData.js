@@ -6,7 +6,7 @@
 //each trip is associated with a user by id
 
 const user1 = {
-	_id: "auto created by mongoDb",
+	_id: "1234",
 	name: "Teresa R",
 	email: "trosinski89@gmail.com",
 	trips: [
@@ -25,7 +25,7 @@ const user1 = {
 			},
 			activities: [
 				{
-					_id: "created by MongoDb",
+					_id: "12345",
 					name: "Anakeesta",
 					details: "Outdoor Theme park, walking, food, etc.",
 					url: "https://anakeesta.com/",
