@@ -3,6 +3,7 @@ import styles from "../styles/buildTrip.module.css";
 import "animate.css";
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "../components/navbar"
 
 
 async function handleSubmit(event){
@@ -39,6 +40,7 @@ export default function BuildTrip() {
 				<title>Build a Trip</title>
 				<meta name="description" content="Travel application" />
 			</Head>
+			<Navbar />
 
 			<main className={styles.page}>
 				<Link href='/all-trips'>

@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 import Layout from "../components/layout";
 import "animate.css";
 import Link from "next/link";
-
+import Navbar from "../components/navbar";
 export default function Home() {
 	return (
 		<>
@@ -11,6 +11,7 @@ export default function Home() {
 				<title>Travel App</title>
 				<meta name="description" content="Travel application" />
 			</Head>
+			<Navbar />
 
 			<main className={styles.main}>
 				<h1 className={`${styles.title} animate__animated animate__bounce`}>

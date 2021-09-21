@@ -4,6 +4,7 @@ import "animate.css";
 import TripCard from "../components/tripCard";
 import Link from "next/link";
 import { MongoClient } from 'mongodb';
+import Navbar from "../components/navbar"
 
 
 export default function AllTrips(props) {
@@ -14,18 +15,9 @@ export default function AllTrips(props) {
 				<title>All Trips for Specific User</title>
 				<meta name="description" content="Travel application" />
 			</Head>
-
+			<Navbar/>
 			<main className={styles.page}>
-				<Link href="/">
-					<a className={styles.back}>back</a>
-				</Link>
 				<p className="title"> All TRIPS FOR {props.name} </p>
-				<Link href="/build-trip">
-					<a>
-						<p className={styles.button}>Create New Trip</p>
-					</a>
-				</Link>
-
 				<div className={styles.border}> -</div>
 				<div className={styles.tripContainer}>
 					{

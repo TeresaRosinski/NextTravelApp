@@ -3,6 +3,7 @@ import styles from "../styles/activity.module.css";
 import "animate.css";
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "../components/navbar"
 
 export default function BuildTrip() {
 	return (
@@ -11,7 +12,7 @@ export default function BuildTrip() {
 				<title>Build a Trip</title>
 				<meta name="description" content="Travel application" />
 			</Head>
-
+			<Navbar/>
 			<main>
 				<div className={styles.header}>
 					<p className={styles.title}>Edit Dynamically Render Name Here</p>

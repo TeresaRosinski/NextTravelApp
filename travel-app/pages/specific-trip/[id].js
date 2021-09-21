@@ -5,7 +5,7 @@ import ActivityCard from "../../components/activityCard";
 import Image from "next/image";
 import Link from "next/link";
 import { MongoClient, ObjectId } from 'mongodb';
-
+import Navbar from "../../components/navbar";
 
 export default function SpecificTrip(props) {
 	const trip = JSON.parse(props.trip);
@@ -19,7 +19,7 @@ export default function SpecificTrip(props) {
 				<title>Specific Trip</title>
 				<meta name="description" content="Travel application" />
 			</Head>
-
+			<Navbar />
 			<main className={styles.page}>
 				<div className={styles.header}>
 					<div className={styles.headerText}>

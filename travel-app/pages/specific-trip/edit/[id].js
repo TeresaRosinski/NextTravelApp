@@ -4,7 +4,7 @@ import "animate.css";
 import Image from "next/image";
 import Link from "next/link";
 import { MongoClient, ObjectId } from 'mongodb';
-
+import Navbar from "../../../components/navbar";
 
 
 export async function getServerSideProps(context) {
@@ -77,7 +77,7 @@ export default function EditTrip(props) {
 				<title>Build a Trip</title>
 				<meta name="description" content="Travel application" />
 			</Head>
-
+			<Navbar />
 			<main className={styles.page}>
 				<Link href='/all-trips'>
 					<a className={styles.back}>back</a>
