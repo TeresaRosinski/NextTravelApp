@@ -12,9 +12,10 @@
   justify-content: space-between;
   align-items: center;
   height: auto;
-  width: 100%;
+  width: 95%;
   margin-top:10%;
   margin-bottom:5%;
+  padding-right: 5%;
 }
 .image{
   display: flex;
