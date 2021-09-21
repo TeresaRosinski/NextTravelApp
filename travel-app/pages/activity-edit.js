@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/navbar"
 
-export default function BuildTrip() {
+export default function EditActivity() {
 	return (
 		<>
 			<Head>
-				<title>Build a Trip</title>
+				<title>Edit Activity</title>
 				<meta name="description" content="Travel application" />
 			</Head>
 			<Navbar/>
