@@ -20,6 +20,7 @@
 * A user can create and account which stores their specific Trip  Data
 * Authorization and Authenticaion added
 * Data Validation 
+* Responsive Web Design
 
 ### Stage Three
 * A 'Schedule' will be automatically generated for each trip a user creates. 
@@ -153,6 +154,7 @@
 
 * Still working on Full CRUD functionality for a Trip and its associated Activities
 * At this Application assumes there is only one user - due to that and the way the code is structured there is no authorization or authentication built in, yet.
+* Responsive Web Design has not been implemented yet - so this app only functions properly on a desktop computer
 
 ## Support and contact details
 
