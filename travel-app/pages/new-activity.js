@@ -5,11 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
-export default function BuildTrip() {
-	const tripData = user1.trips[0];
-	const activityData = tripData.activities;
-	const [activities, setActivity] = useState(activityData);
-	console.log(activityData);
+export default function BuildActivity() {
 
 	return (
 		<>
