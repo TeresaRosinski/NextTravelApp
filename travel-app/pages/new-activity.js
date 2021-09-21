@@ -83,9 +83,6 @@ export default function BuildTrip() {
 						<Image src="/character22.svg" height={500} width={500}></Image>
 					</div>
 				</div>
-				<Link href="/specific-trip">
-					<a className={styles.back}>back</a>
-				</Link>
 			</main>
 		</>
 	);

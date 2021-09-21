@@ -7,14 +7,6 @@
   --teal:rgba(88, 42, 68,1);
   --subPurp:rgba(88,42,68, .6);
   --brown: #6f584d;
-  --red: #7c2020;
-  --ruby: #cd342e;
-  --white: #fdfcfb;
-  --teal_r:(109,157,158);
-  --brown_r: (111,88,77);
-  --red_r: #7c2020;
-  --ruby_r: #cd342e;
-  --white_r: #fdfcfb;
 }
 html,
 body {
@@ -23,11 +15,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
-
-

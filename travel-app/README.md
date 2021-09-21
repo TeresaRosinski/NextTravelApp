@@ -1,3 +1,54 @@
+<h1 align="center"><strong>Travel Planning Application (Better Name Coming Soon)</strong></h1>
+<h2 align="center">NextJS, MongoDB project focused on user interaction and smooth design </h2>
+<h4 align="center"><a href="https://next-travel-app-gnbaxtuon-teresarosinski.vercel.app/">Visit The Site Hosted Using Vercel</a></em></h4>
+
+![Screenshot](arts.png)
+![Screenshot](auto.png)
+![Screenshot](books.png)
+
+##### __Created:__ 7/19/2021
+##### __Last Updated:__ 7/19/2021 
+##### By _** Teresa Rosinski**_  
+
+
+## Description
+This is an project that uses vanilla Javascript to connect with top stoies from the New York Times. The purpose of this project is to practice connecting to API's as well as experimenting with styles, colors and fonts. To do this, each section is styled differently. 
+
+## Setup/Installation Requirements
+
+* to clone this content, copy the url provided by the 'clone or download' button in GitHub
+* in command line use the command 'git clone (GitHub url)'
+* open the program in a code editor
+
+
+## Known Bugs
+
+* n/a
+
+## Support and contact details
+
+* Name: Teresa Rosinski
+* Email: trosinski89@gmail.com
+
+
+## Technologies Used
+
+* Visual Studio Code
+* Javascript
+* New York Times API
+
+### License
+
+Copyright (c) 2020 **_Teresa Rosinski_**
+
+This software is licensed under the MIT license.
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
