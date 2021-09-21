@@ -30,28 +30,38 @@ export default function SpecificTrip(props) {
 				</div>
 				<div className={styles.sectionContainerCenter}>
 					
-				<p className={styles.sectionTitle}>Lodging</p>
+				
 					<div className={styles.lodging}>
-
-						<p className={styles.subText}>Name: <span>{trip.lodging.name}</span></p>
-						<p className={styles.subText}>Address:<span>{trip.lodging.location}</span></p>
-						<p className={styles.subText}>Price Per Night: <span>{trip.lodging.price_per_night}</span> </p>
-						<p className={styles.subText}>Total Nights:<span>{trip.lodging.num_nights}</span> </p>
-						<p className={styles.subText}>Total Price:<span>${trip.lodging.num_nights * trip.lodging.price_per_night}</span></p>
+						<p className={styles.sectionTitleLodg}>Lodging</p>
+						<div className={styles.lodgRow}>
+							<p className={styles.subTextL}>Name: </p> 
+							<p className={styles.subTextLRes}>{trip.lodging.name}</p>
+						</div>
+						<div className={styles.lodgRow}>
+							<p className={styles.subTextL}>Address: </p> 
+							<p className={styles.subTextLRes}>{trip.lodging.location}</p>
+						</div>
+						<div className={styles.lodgRow}>
+							<p className={styles.subTextL}>Total Nights: </p> 
+							<p className={styles.subTextLRes}>{trip.lodging.num_nights}</p>
+						</div>
+						<div className={styles.lodgRow}>
+							<p className={styles.subTextL}>Total Price: </p> 
+							<p className={styles.subTextLRes}>${trip.lodging.num_nights * trip.lodging.price_per_night}</p>
+						</div>
+			
 					</div>
 				</div>
-
 				<div className={styles.sectionContainerLeft}>
-					<p className={styles.sectionTitle}>Activities</p>
-					
+					<p className={styles.sectionTitleAct}>Activities</p>
+					<Link href='/new-activity'>
+						<a className={styles.button}>Add New Activity</a>
+					</Link>
 					<div className={styles.activities}>
 						{
 							activityData.map(act => <ActivityCard name={act.name} id={act._id} url={act.url} details={act.details} hours={act.hours} date_going={act.date_going} location={act.location}/>)
 						}
 					</div>
-					<Link href='/new-activity'>
-						<a className={styles.button}>Add New Activity</a>
-					</Link>
 				</div>
 			</main>
 		</>

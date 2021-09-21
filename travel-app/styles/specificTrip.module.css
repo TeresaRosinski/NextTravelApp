@@ -5,16 +5,14 @@
   justify-content: center;
   text-align:center;
   font-size: 150%;
-  width: 100%;
+  width: 50%;
   background-color: white;
   border: 1px solid rgba(66,77,144);
   color:rgba(66,77,144,.8);
-  margin-bottom: 3%;
-  margin-top:2%;
+  margin-bottom: 10%;
 }
 .button:hover{
-  background-color: rgba(66,77,144,.8);
-  color:white;
+  transform: scale(1.02);
   box-shadow: 4px 4px 6px 6px rgba(66,77, 144, .3);
   cursor:pointer;
   border:none;
@@ -40,15 +38,49 @@
   align-items: center;
   background-color:rgba(66,77,144);
 }
-.sectionTitle{
+.sectionTitleLodg{
   font-size: 400%;
   font-weight: bold;
   letter-spacing: 5px;
   text-align:center;
-  margin-bottom:2%;
+  margin-bottom:8%;
   margin-top:5%;
   color: rgba(114,45,84);
   text-transform: uppercase;
+}
+.sectionTitleAct{
+  font-size: 400%;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-align:center;
+  margin-bottom:3%;
+  margin-top:5%;
+  color: white;
+  text-transform: uppercase;
+ }
+.subTextL {
+  font-size:130%;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color:var(--teal);
+  width:30%;
+  text-decoration: underline;
+}
+.subTextLRes {
+  font-size:110%;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color:var(--teal);
+  width:60%;
+  margin-left:5%;
+  text-align: left;
+}
+.lodgRow{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  width:100%;
+  padding: 1%;
 }
 .sectionContent{
   font-size: 120%;
@@ -63,7 +95,7 @@
   background-color: rgba(114,45,84, .1);
   height:auto;
   border-radius:2px;
-  padding:5%;
+  padding:15% 10%;
 
 }
 .lodging{
@@ -72,7 +104,7 @@
   justify-content: stretch;
   flex-wrap: wrap;
   background-color: rgba(255, 255, 255, .8);
-  padding:5%;
+  padding:10%;
   border-radius:2px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -88,7 +120,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding:7%;
-  background-color: rgba(216,186,163, .3);
+  background-color: rgba(216,186,163, .1);
 }
 .headerText{
   display: flex;
