@@ -4,6 +4,7 @@ import "animate.css";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/navbar"
+import Router from 'next/router'
 
 
 async function handleSubmit(event){
@@ -31,6 +32,8 @@ async function handleSubmit(event){
 			},
 			body: JSON.stringify(dumbTrip)
 		  });
+		  Router.push('/all-trips')
+
 };
 
 export default function BuildTrip() {
