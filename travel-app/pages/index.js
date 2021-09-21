@@ -31,7 +31,6 @@ export default function Home() {
 					</Link>
 				</div>
 			</main>
-			<footer className={styles.footer}></footer>
 		</>
 	);
 }

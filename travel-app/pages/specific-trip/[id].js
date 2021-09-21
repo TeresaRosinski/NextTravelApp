@@ -20,7 +20,7 @@ export default function SpecificTrip(props) {
 				<meta name="description" content="Travel application" />
 			</Head>
 			<Navbar />
-			<main c>
+			<main>
 				<div className={styles.header}>
 					<div className={styles.headerText}>
 						<p className={styles.title}>{trip.name}</p>
