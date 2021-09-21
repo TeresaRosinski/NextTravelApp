@@ -17,7 +17,7 @@ export default function AllTrips(props) {
 			</Head>
 			<Navbar/>
 			<main className={styles.page}>
-				<p className="title"> All TRIPS FOR {props.name} </p>
+				<p className={styles.title}> All TRIPS FOR {props.name} </p>
 				<div className={styles.border}> -</div>
 				<div className={styles.tripContainer}>
 					{

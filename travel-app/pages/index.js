@@ -12,7 +12,6 @@ export default function Home() {
 				<meta name="description" content="Travel application" />
 			</Head>
 			<Navbar />
-
 			<main className={styles.main}>
 				<h1 className={`${styles.title} animate__animated animate__bounce`}>
 					Travel App

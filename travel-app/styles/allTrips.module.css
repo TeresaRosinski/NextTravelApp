@@ -5,7 +5,15 @@
   padding: 7%;
   min-height: 100vh;
 }
-
+.title {
+  margin: 3%;
+  font-size: 400%;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--teal);
+  border-bottom: 1px solid var(--teal) 30%;
+};
 .border{
   margin-left: 35%;
   margin-right: 35%;
@@ -13,16 +21,9 @@
   height: 15px;
   background-color: var(--teal);
 }
-
 .tripContainer{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 5%;
-}
-
-.back{
-  padding-left:4%;
-  text-decoration: underline;
-  font-size:130%;
 }
