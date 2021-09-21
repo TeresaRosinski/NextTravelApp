@@ -42,10 +42,7 @@ export default function BuildTrip() {
 			</Head>
 			<Navbar />
 
-			<main className={styles.page}>
-				<Link href='/all-trips'>
-					<a className={styles.back}>back</a>
-				</Link>
+			<main>
 				<div className={styles.header}>
 					<div className={styles.image}>
 						<Image src="/character-working.svg" height={500} width={500}></Image>
