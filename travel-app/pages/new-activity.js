@@ -10,7 +10,7 @@ export default function BuildActivity() {
 	return (
 		<>
 			<Head>
-				<title>Build a Trip</title>
+				<title>Create Activity For Trip</title>
 				<meta name="description" content="Travel application" />
 			</Head>
 
