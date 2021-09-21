@@ -20,17 +20,18 @@ export default function SpecificTrip(props) {
 				<meta name="description" content="Travel application" />
 			</Head>
 			<Navbar />
-			<main className={styles.page}>
+			<main c>
 				<div className={styles.header}>
 					<div className={styles.headerText}>
 						<p className={styles.title}>{trip.name}</p>
 						<p className={styles.subText}>From: {trip.start_date}</p>
 						<p className={styles.subText} >To: {trip.end_date}</p>
+						<Link href={`/specific-trip/edit/${trip._id}`} id={trip._id}>
+							<a className={styles.buttonEdit}>Edit Trip</a>
+						</Link>
 					</div>
 				</div>
 				<div className={styles.sectionContainerCenter}>
-					
-				
 					<div className={styles.lodging}>
 						<p className={styles.sectionTitleLodg}>Lodging</p>
 						<div className={styles.lodgRow}>
