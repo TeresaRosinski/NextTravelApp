@@ -1,13 +1,7 @@
 module.exports = {
-  reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: '/build-trip',
-        destination: '/all-trips',
-        permanent: true,
-      },
-    ]
-  },
-
+  env: {
+    MONGO_URI: "mongodb+srv://Teresa:7xgh1iJnJeBfW9Bh@cluster0.eil3q.mongodb.net/MongoTravelDB?retryWrites=true&w=majority"
+  }
 }
+
+
