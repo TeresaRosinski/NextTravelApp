@@ -1,9 +1,12 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Layout from "../components/layout";
 import "animate.css";
 import Link from "next/link";
 import Navbar from "../components/navbar";
+
+
+
+
 export default function Home() {
 	return (
 		<>
@@ -33,3 +36,4 @@ export default function Home() {
 		</>
 	);
 }
+

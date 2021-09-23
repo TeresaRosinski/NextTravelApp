@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "isomorphic-unfetch": "^3.1.0",
     "lottie-web": "^5.7.13",
     "mongodb": "^4.1.2",
     "mongoose": "^6.0.7",

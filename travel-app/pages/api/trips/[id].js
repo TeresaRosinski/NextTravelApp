@@ -1,5 +1,4 @@
 import dbConnect from "../../../util/dbConnect";
-import mongoose from "mongoose";
 import Trip from "../../../models/Trip";
 
 dbConnect();
