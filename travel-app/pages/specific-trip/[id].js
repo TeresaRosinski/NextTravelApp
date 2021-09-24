@@ -4,15 +4,14 @@ import "animate.css";
 import ActivityCard from "../../components/activityCard";
 import Image from "next/image";
 import Link from "next/link";
-import { MongoClient, ObjectId } from 'mongodb';
 import Navbar from "../../components/navbar";
 
-export default function SpecificTrip(props) {
-	const trip = JSON.parse(props.trip);
-	console.log(trip);
-	console.log(trip.name);
 
-	const activityData = trip.activities;
+
+
+export default function SpecificTrip(props) {
+
+	//const activityData = trip.activities;
 	return (
 		<>
 			<Head>
@@ -59,33 +58,22 @@ export default function SpecificTrip(props) {
 						<a className={styles.button}>Add New Activity</a>
 					</Link>
 					<div className={styles.activities}>
-						{
-							activityData.map(act => <ActivityCard name={act.name} id={act._id} url={act.url} details={act.details} hours={act.hours} date_going={act.date_going} location={act.location}/>)
-						}
+						/*{
+							//activityData.map(act => <ActivityCard name={act.name} id={act._id} url={act.url} details={act.details} hours={act.hours} date_going={act.date_going} location={act.location}/>)
+						}*/
 					</div>
 				</div>
 			</main>
 		</>
 	);
 }
+//behavior, Next JS specific function, allows us to run code before code is rendered out to page - runs server-side. 
+SpecificTrip.getInitialProps = async(req) => {
+	console.log('req', req)
+	const res = await fetch('http://localhost:3000/api/trips/all-trips/[id]');
 
-export async function getServerSideProps(context) {
-	const client = new MongoClient("mongodb+srv://Teresa:Teresa@cluster0.eil3q.mongodb.net/next_travel_app?retryWrites=true&w=majority");
-	try {
-		await client.connect();
-		const database = client.db("NextTravelApp");
-		const userDataCollection = database.collection('UserData');
-		const userTrips = await userDataCollection.findOne({ _id: ObjectId("6147c6b6dac5291aa83b98e0")});
-		const trip = userTrips.trips.find(trip => trip._id.toString() == context.params.id);
-		return {
-			props: { trip: JSON.stringify(trip) }, // will be passed to the page component as props
-		}
-	}
-	catch (error) {
-		console.log(error)
-	}
-	finally {
-		await client.close();
-	}
-	return {props: {}}
+	const { data } = await res.json();
+
+	return { trips: data };
 }
+

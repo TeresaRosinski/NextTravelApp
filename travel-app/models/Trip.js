@@ -18,6 +18,9 @@ const TripSchema = new Schema({
 	end_date: {
 		type: Date,
 	},
+	budget: {
+		type: Number,
+	},
 	quant_people: {
 		type: Number,
 	},

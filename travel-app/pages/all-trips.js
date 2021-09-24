@@ -8,8 +8,7 @@ import Navbar from "../components/navbar"
 
 
 
-export default function AllTrips({trips}) {
-	console.log(trips);
+export default function AllTrips({ trips }) {
 	return (
 		<>
 			<Head>
