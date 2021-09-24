@@ -10,7 +10,6 @@ import fetch from "isomorphic-unfetch";
 //useRouter = hook from next js
 import { useRouter } from "next/router";
 
-
 //Static Page b/c no data needed
 export default function BuildTrip() {
 	const [form, setForm] = useState({
@@ -176,7 +175,7 @@ export default function BuildTrip() {
 						<input
 							onChange={handleChange}
 							type="text"
-							name="lodging_name"
+							name="lodging[0].name"
 							placeholder="Lodging"></input>
 					</div>
 					<div className={styles.field}>
@@ -184,7 +183,7 @@ export default function BuildTrip() {
 						<input
 							onChange={handleChange}
 							type="text"
-							name="lodging_location"
+							name="lodging.location"
 							placeholder="Lodging Address"></input>
 					</div>
 					<div className={styles.fields_row}>
@@ -193,7 +192,7 @@ export default function BuildTrip() {
 							<input
 								onChange={handleChange}
 								type="number"
-								name="price_per_night"
+								name="lodging[price_per_night]"
 								id="price-night"
 								placeholder="Price Per Night"
 								min="0"></input>
@@ -203,8 +202,8 @@ export default function BuildTrip() {
 							<input
 								onChange={handleChange}
 								type="number"
-								name="num_nights"
-								id="lodging-nights"
+								name="lodging[total_nights]"
+								id="total_nights"
 								placeholder="Total Nights at Lodging"
 								min="0"></input>
 						</div>

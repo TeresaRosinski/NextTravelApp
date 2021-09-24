@@ -171,8 +171,8 @@ export default function EditTrip({ trip }) {
 								onChange={handleChange}
 								type="number"
 								name="num_travelers"
-								id="budget"
-								palceholder="$"
+								id="num_travelers"
+								
 								min="0"></input>
 						</div>
 					</div>
@@ -182,7 +182,7 @@ export default function EditTrip({ trip }) {
 						<input
 							onChange={handleChange}
 							type="text"
-							name="lodging_name"
+							name="lodging.name"
 							placeholder="Lodging"></input>
 					</div>
 					<div className={styles.field}>
@@ -190,7 +190,7 @@ export default function EditTrip({ trip }) {
 						<input
 							onChange={handleChange}
 							type="text"
-							name="lodging_location"
+							name="lodging.location"
 							placeholder="Lodging Address"></input>
 					</div>
 					<div className={styles.fields_row}>
@@ -199,7 +199,7 @@ export default function EditTrip({ trip }) {
 							<input
 								onChange={handleChange}
 								type="number"
-								name="price_per_night"
+								name="lodging.price_per_night"
 								id="price-night"
 								placeholder="Price Per Night"
 								min="0"></input>
@@ -209,7 +209,7 @@ export default function EditTrip({ trip }) {
 							<input
 								onChange={handleChange}
 								type="number"
-								name="num_nights"
+								name="lodging.num_nights"
 								id="lodging-nights"
 								placeholder="Total Nights at Lodging"
 								min="0"></input>

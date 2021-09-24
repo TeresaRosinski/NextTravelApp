@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+import ActivitySchema from './Activity';
+import LodgingSchema from './Lodging';
 
 const TripSchema = new Schema({
 	trip_name: {
@@ -24,25 +26,8 @@ const TripSchema = new Schema({
 	quant_people: {
 		type: Number,
 	},
-	lodging: [
-		{
-			name: String,
-			location: String,
-			price_per_night: Number,
-			total_nights: Number,
-		},
-	],
-	activities: [
-		{
-			name: String,
-			details: String,
-			url: String,
-			hours: String,
-			date_going: Date,
-			location: String,
-			price_person: Number,
-		},
-	],
+	lodging: [LodgingSchema],
+	activities: [ActivitySchema],
 });
 
 module.exports = mongoose.models.Trip || mongoose.model("Trip", TripSchema);

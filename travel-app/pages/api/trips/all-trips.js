@@ -18,6 +18,7 @@ export default async (req, res) => {
 		case "POST":
 			try {
 				const trip = await Trip.create(req.body);
+				console.log('t', trip);
 
 				res.status(201).json({ success: true, data: trip });
 			} catch (error) {
