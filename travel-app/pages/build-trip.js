@@ -10,8 +10,8 @@ import fetch from "isomorphic-unfetch";
 //useRouter = hook from next js
 import { useRouter } from "next/router";
 
-//Static Page b/c no data needed
 
+//Static Page b/c no data needed
 export default function BuildTrip() {
 	const [form, setForm] = useState({
 		trip_name: "",
@@ -45,7 +45,6 @@ export default function BuildTrip() {
 	}, [errors]);
 
 	const handleSubmit = (e) => {
-		console.log("handleSubmit e", e);
 		e.preventDefault();
 		let errs = validate();
 		setErrors(errs);
@@ -53,7 +52,6 @@ export default function BuildTrip() {
 	};
 
 	const handleChange = (e) => {
-		console.log("handle change e", e);
 		setForm({
 			//spread out current forms state
 			...form,
@@ -64,6 +62,7 @@ export default function BuildTrip() {
 
 	const validate = () => {
 		let err = {};
+		//only required property = trip name
 		if (!form.trip_name) {
 			err.trip_name = "Trip Name is Required";
 		}
