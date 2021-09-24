@@ -9,10 +9,36 @@ import fetch from "isomorphic-unfetch";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-//Dynamic Data needed from server = so page is rendered server-side
-
 export default function SpecificTrip({ trip }) {
 	console.log(trip);
+	const [confirm, setConfirm] = useState(false);
+	const [isDeleting, setIsDeleting] = useState(false);
+	const router = useRouter();
+
+	//sync with the is deleting variable
+	useEffect(() => {
+		if (isDeleting) {
+			deleteTrip();
+		}
+	}, [isDeleting]);
+
+	const deleteTrip = async () => {
+		//on the client side use router to grab id
+		const tripId = router.query.id;
+		console.log(tripId)
+		try {
+			const deleted = await fetch(`http://localhost:3000/api/trips/${tripId}`, {
+				method: "Delete",
+			});
+			router.push("/all-trips");
+		} catch (err) {
+			console.log(err);
+		}
+	};
+	const handleDelete = async () => {
+		setIsDeleting(true);
+		close();
+	};
 	//const activityData = trip.activities;
 	return (
 		<>
@@ -30,6 +56,12 @@ export default function SpecificTrip({ trip }) {
 						<Link href={`/specific-trip/edit/${trip._id}`} id={trip._id}>
 							<a className={styles.buttonEdit}>Edit Trip</a>
 						</Link>
+						<p
+							id={trip._id}
+							className={styles.buttonEdit}
+							onClick={handleDelete}>
+							Delete Trip
+						</p>
 					</div>
 				</div>
 				<div className={styles.sectionContainerCenter}>
