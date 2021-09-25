@@ -1,6 +1,6 @@
 <h1 align="center"><strong>Travel Planning Application (Better Name Needed)</strong></h1>
 <h2 align="center">NextJS, MongoDB project focused on user interaction and smooth design </h2>
-<h4 align="center"><a href="https://next-travel-app-gnbaxtuon-teresarosinski.vercel.app/">Visit The Site Hosted Using Vercel</a></em></h4>
+<h4 align="center"><a href="https://next-travel-app.vercel.app">Visit The Site Hosted Using Vercel</a></em></h4>
 
 >##### __Started:__ 09/15/2021
 >##### __Last Updated:__ 09/21/2021 
